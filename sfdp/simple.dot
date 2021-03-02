@@ -1,0 +1,13 @@
+graph {
+a [type=TXNFACTOR, label=NAC005, width=0.5];
+b [type=METABOLIC,label=THFS, width=0.7, shape=diamond];
+c [style=filled, fillcolor=yellow];
+d [shape=box];
+f ;
+a -- b;
+c -- a [style=dotted];
+c -- d [color=blue];
+d -- b [penwidth=5];
+c -- b;
+c -- f;
+}
