@@ -2,7 +2,6 @@ import networkx as nx
 from networkx.drawing.nx_agraph import write_dot
 import pygraphviz as pgv 
 import os
-
 G=nx.Graph(pgv.AGraph("network.dot"))
 color={"METABOLIC":"red", "OTHER_RNA":"green","TXNFACTOR":"blue","PRE_TRNA":"yellow"}
 nodes=list(G.nodes())

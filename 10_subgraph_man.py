@@ -2,7 +2,6 @@ import networkx as nx
 from networkx.drawing.nx_agraph import write_dot
 import pygraphviz as pgv 
 import os
-
 G=nx.Graph(pgv.AGraph("network.dot"))
 
 color={"METABOLIC":"red", "OTHER_RNA":"green","TXNFACTOR":"blue","PRE_TRNA":"yellow"}
@@ -22,7 +21,6 @@ for e in G.edges():
     G.edges[e]['color']='gray'
     if G.nodes[e[0]]['type'] == G.nodes[e[1]]['type']:
         G.edges[e]['color']=G.nodes[e[0]]['color']
-
 
 out_file_name="network10.dot"
 write_dot(G, out_file_name)
